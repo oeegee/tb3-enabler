@@ -78,7 +78,7 @@ def backquote(command):
 
 def check_SIP():
     sip_info = backquote("nvram csr-active-config")
-    if sip_info.find("w%00%00%00") == -1:
+    if sip_info.find("%00%00%00") == -1:
         print("you must disable System Integrity Protection",file=sys.stderr)
         sys.exit(1)
 
