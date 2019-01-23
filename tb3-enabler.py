@@ -35,7 +35,8 @@ md5_version = {
     "a47a724fdb13df4cef1b662b7ccbc9d1": ["10.13.3 (17D47)"],
     "f2ed59d381f83c61ad0ec835364b2b79": ["10.13.4 (17E199)"],
     "e64e2678bb38f6f60d3a9647c5d53eb6": ["10.13.4 (17E202)"],
-    "f46b4c2d8025c479d9a66e62cfa6d851": ["10.14 (18A391)"]
+    "f46b4c2d8025c479d9a66e62cfa6d851": ["10.14 (18A391)"],
+    "8de0163c0ae5dab4b725dab2d9a1f0a1": ["10.14.2 (18C54)"]
 }
 md5_patch = {
     "00e2f0eb5db157462a83e4de50583e33": "a6c2143c2f085c2c104369d7a1adfe03",
@@ -53,7 +54,8 @@ md5_patch = {
     "a47a724fdb13df4cef1b662b7ccbc9d1": "bcf9f00b8028bd305176816563ab2c00",
     "f2ed59d381f83c61ad0ec835364b2b79": "9591b6f618d5d6ecc016488bc29e2b9f",
     "e64e2678bb38f6f60d3a9647c5d53eb6": "555a6efce42709e06530251eb0f71315",
-    "f46b4c2d8025c479d9a66e62cfa6d851": "07a13e6e367608846ecbe3a1154bd05c"
+    "f46b4c2d8025c479d9a66e62cfa6d851": "07a13e6e367608846ecbe3a1154bd05c",
+    "8de0163c0ae5dab4b725dab2d9a1f0a1": "b242fcabdf46bb83f083af2c97179bb2"
 }
 md5_patch_r = dict((v, k) for k, v in md5_patch.items())
 
@@ -84,7 +86,8 @@ re_md5 = {
         "bcb319c05541da0ccffd7a52da7236c5",
         "427b87e16e15c55c687a565fbd555e03",
         "a47a724fdb13df4cef1b662b7ccbc9d1",
-        "f46b4c2d8025c479d9a66e62cfa6d851"
+        "f46b4c2d8025c479d9a66e62cfa6d851",
+        "b242fcabdf46bb83f083af2c97179bb2"
         ]
 }
 md5_re = dict((v, re_index[k]) for k, l in re_md5.items() for v in l)
