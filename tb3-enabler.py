@@ -37,7 +37,11 @@ md5_version = {
     "e64e2678bb38f6f60d3a9647c5d53eb6": ["10.13.4 (17E202)"],
     "f46b4c2d8025c479d9a66e62cfa6d851": ["10.14 (18A391)"],
     "8de0163c0ae5dab4b725dab2d9a1f0a1": ["10.14.2 (18C54)"]
+    # "b1fc234210e63d9cc5a1f7c198418c01": ["10.14.4 (18E226)"]
 }
+# added md5 /System/Library/Extensions/IOThunderboltFamily.kext/Contents/MacOS/IOThunderboltFamily
+# MD5 (/System/Library/Extensions/IOThunderboltFamily.kext/Contents/MacOS/IOThunderboltFamily) = b1fc234210e63d9cc5a1f7c198418c01
+
 md5_patch = {
     "00e2f0eb5db157462a83e4de50583e33": "a6c2143c2f085c2c104369d7a1adfe03",
     "ebde660af1f51dc7482551e8d07c62fd": "2ebb68137da4a1cb0dfc6e6f05be3db2",
@@ -56,6 +60,7 @@ md5_patch = {
     "e64e2678bb38f6f60d3a9647c5d53eb6": "555a6efce42709e06530251eb0f71315",
     "f46b4c2d8025c479d9a66e62cfa6d851": "07a13e6e367608846ecbe3a1154bd05c",
     "8de0163c0ae5dab4b725dab2d9a1f0a1": "b242fcabdf46bb83f083af2c97179bb2"
+    # "b1fc234210e63d9cc5a1f7c198418c01": "????"
 }
 md5_patch_r = dict((v, k) for k, v in md5_patch.items())
 
@@ -87,8 +92,9 @@ re_md5 = {
         "427b87e16e15c55c687a565fbd555e03",
         "a47a724fdb13df4cef1b662b7ccbc9d1",
         "f46b4c2d8025c479d9a66e62cfa6d851",
-        "b242fcabdf46bb83f083af2c97179bb2"
+        "b242fcabdf46bb83f083af2c97179bb2",
         "8de0163c0ae5dab4b725dab2d9a1f0a1"
+        #"b1fc234210e63d9cc5a1f7c198418c01"
         ]
 }
 md5_re = dict((v, re_index[k]) for k, l in re_md5.items() for v in l)
@@ -107,7 +113,7 @@ def backquote(command):
 
 def check_SIP():
     sip_info = backquote("nvram csr-active-config")
-    if sip_info.find("%00%00%00") == -1:
+    if sip_info.find(b"%00%00%00") == -1:
         print("you must disable System Integrity Protection",file=sys.stderr)
         sys.exit(1)
 
